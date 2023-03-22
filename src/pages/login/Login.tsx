@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { InputLogin } from "./components/InputLogin";
 
 
 export const Login = () => {
@@ -12,14 +13,8 @@ export const Login = () => {
 
     return (
         <form>
-            <label>
-                <span>E-mail</span>
-                <input value={email} type="email" onChange={e => setEmail(e.target.value)} />
-            </label>
-            <label>
-                <span>Senha</span>
-                <input value={password} type="password" onChange={e => setPassword(e.target.value)} />
-            </label>
+            <InputLogin type="email" label="E-mail" value={email} onChange={newValue => setEmail(newValue)} />
+            <InputLogin type="password" label="Senha" value={password} onChange={newValue => setPassword(newValue)} />
             <button type="button" onClick={handlerLogin}>Login</button>
         </form>
     );
