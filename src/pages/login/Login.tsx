@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
-import { UsuarioLogadoContext } from "../../shared/contexts";
+import { useState } from "react";
+import { useUsuarioLogado } from "../../shared/hooks";
 import { InputLogin } from "./components/InputLogin";
 
 
 export const Login = () => {
-    const { nome, emailLogado } = useContext(UsuarioLogadoContext)
+    const { nome, emailLogado } = useUsuarioLogado()
     const [email, setEmail] = useState(emailLogado);
     const [password, setPassword] = useState('');
 
