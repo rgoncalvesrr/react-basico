@@ -2,7 +2,7 @@ import React from "react";
 
 interface IInputLoginProps {
     label: string;
-    value: string;
+    value?: string;
     type?: string;
     onChange: (newValue: string) => void;
 }
